@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css" media="screen" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.3.0/sockjs.js"
+        integrity="sha256-CyYeeUK0ENZXZgzqUPNP3D+T5uQj5YwpNAFISsCeu4s=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./slider.css" media="screen" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"
+        integrity="sha256-4jNHNewFZSwkUiWXCfjQ0erj6guZPNAjfiJQiBHk4K4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="client.js"></script>
+
+</head>
+
+<body>
+    <script type="text/javascript" src="app.js"></script>
+    <div class="container mx-auto ">
+        <div class="row mx-auto">
+            <div class="col-1 mx-auto">
+                <i onclick="increment(event)" class="motor1 icon fa fa-plus-circle"></i>
+            </div>
+            <div class="col-1 mx-auto">
+                <i class="motor1 icon fa fa-minus-circle" onclick="decrement(event)"></i>
+            </div>
+            <div class="form-check mx-auto form-check-inline mx-auto ">
+                <input class="motor1 form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                    onclick="activateMotor(event)">
+                <label class="form-check-label checkboxtext" for="inlineCheckbox1">Motor 1</label>
+            </div>
+        </div>
+        <div class="row mx-auto ">
+            <div class="col-1 mx-auto ">
+                <i class="motor2 icon fa fa-plus-circle" onclick="increment(event)"></i>
+            </div>
+            <div class="col-1 mx-auto ">
+                <i class="motor2 icon fa fa-minus-circle" onclick="decrement(event)"></i>
+            </div>
+            <div class="form-check form-check-inline mx-auto ">
+                <input class="motor2 form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                    onclick="activateMotor(event)">
+                <label class="form-check-label checkboxtext" for="inlineCheckbox1">Motor 2</label>
+            </div>
+        </div>
+        <div class="row mx-auto ">
+            <div class="col-1 mx-auto ">
+                <i class="motor3 icon fa fa-plus-circle" onclick="increment(event)"></i>
+            </div>
+            <div class="col-1 mx-auto ">
+                <i class="motor3 icon fa fa-minus-circle" onclick="decrement(event)"></i>
+            </div>
+            <div class="form-check form-check-inline mx-auto ">
+                <input class="motor3 form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                    onclick="activateMotor(event)">
+                <label class="form-check-label checkboxtext" for="inlineCheckbox1">Motor 3</label>
+            </div>
+        </div>
+        <div class="row mx-auto ">
+            <div class="col-1 mx-auto ">
+                <i class="motor4 icon fa fa-plus-circle" onclick="increment(event)"></i>
+            </div>
+            <div class="col-1 mx-auto ">
+                <i class="motor4 icon fa fa-minus-circle" onclick="decrement(event)"></i>
+            </div>
+            <div class="form-check form-check-inline mx-auto ">
+                <input class="motor4 form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                    onclick="activateMotor(event)">
+                <label class="form-check-label checkboxtext" for="inlineCheckbox1">Motor 4</label>
+            </div>
+        </div>
+        <div class="row mx-auto ">
+            <div class="col-1 mx-auto ">
+                <i class="motor5 icon fa fa-plus-circle" onclick="increment(event)"></i>
+            </div>
+            <div class="col-1 mx-auto ">
+                <i class="motor5 icon fa fa-minus-circle" onclick="decrement(event)"></i>
+            </div>
+            <div class="form-check form-check-inline mx-auto ">
+                <input class="motor5 form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                    onclick="activateMotor(event)">
+                <label class="form-check-label checkboxtext" for="inlineCheckbox1">Motor 5</label>
+            </div>
+        </div>
+        <div class="row mx-auto ">
+            <div class="col-1 mx-auto ">
+                <i class="motor6 icon fa fa-plus-circle" onclick="increment(event)"></i>
+            </div>
+            <div class="col-1 mx-auto ">
+                <i class="motor6 icon fa fa-minus-circle" onclick="decrement(event)"></i>
+            </div>
+            <div class="form-check form-check-inline mx-auto ">
+                <input class="motor6 form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                    onclick="activateMotor(event)">
+                <label class="form-check-label checkboxtext" for="inlineCheckbox1">Clamps</label>
+            </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="row mx-auto">
+            <h4 class="mx-auto text-center col-9 mt-3">Speed</h4>
+        </div>
+        <div class="row mx-auto slider">
+            <input id="slider" class="mx-auto col-9" type="range" onchange="updateSlider()" />
+            <output data-output></output>
+        </div>
+
+        <!-- Memory button -->
+        <div class="row mx-auto mt-4">
+            <div class="mx-auto col-9">
+                <button type="button" class="btn btn-dark btn-lg btn-block" onclick="update()">Save to
+                    memory</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
